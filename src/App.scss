@@ -1,0 +1,52 @@
+@use "./assets/styles/navBar";
+@use "./assets/styles/banner";
+@use "./assets/styles/projectsList";
+@use "./assets/styles/projectItem";
+@use "./assets/styles/contact";
+@use "./assets/styles/footer";
+@use "./assets/styles/variables" as *;
+@import "normalize.css";
+
+@font-face {
+  font-family: Lexend Deca;
+  src: url("../src/assets/font/LexendDeca-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #202020;
+  font-size: $default-font-size;
+  font-family: "Lexend Deca", sans-serif !important;
+}
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dedede;
+  border-radius: 1rem;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 20vh;
+  background-color: #202020;
+  border-radius: 1.5rem;
+  border: 2px solid #dedede;
+}
+
+.common__heading {
+  font-size: $header-part-font-size;
+  color: #dedede;
+  text-align: center;
+  margin-bottom: 6%;
+}

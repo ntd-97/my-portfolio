@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+.projects {
+  padding-top: 18vh;
+}
+
+.projects__year {
+  display: block;
+  font-size: $year-font-size;
+  color: #dedede;
+}
+
+.projects__breakLine {
+  width: 100%;
+  background-color: #dedede;
+  height: 5px;
+}

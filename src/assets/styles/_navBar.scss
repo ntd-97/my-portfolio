@@ -1,0 +1,60 @@
+@use "./variables" as *;
+.navbar {
+  background-color: #323232;
+  opacity: 95%;
+}
+
+.navbar__brand {
+  color: $text-light-color;
+}
+
+.navbar__link {
+  position: relative;
+  margin-left: 5%;
+  color: $text-light-color;
+  font-size: 2rem;
+  line-height: 7rem;
+  transition: all linear 0.2s;
+
+  &::after {
+    position: absolute;
+    background-color: $text-light-color;
+    bottom: 0;
+    left: 50%;
+    content: "";
+    height: 5px;
+    width: 0%;
+    transition: all linear 0.2s;
+  }
+
+  &:hover {
+    color: $text-light-color !important;
+    opacity: 0.8;
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.navbar__link--active {
+  color: $text-light-color;
+
+  &::after {
+    background-color: red;
+    width: 100%;
+    left: 0;
+  }
+}
+
+.navbar__button {
+  border: none;
+  &:focus {
+    border: none;
+  }
+}
+
+.navbar__icon {
+  color: $text-light-color;
+  font-size: $icon-font-size;
+}

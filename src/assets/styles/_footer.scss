@@ -1,0 +1,22 @@
+@use './variables' as *;
+
+.footer {
+margin-top: 10%;
+  border-top: 2px solid #696969;
+}
+
+.footer_copyRight p {
+  line-height: 5rem;
+  font-size: 2rem;
+  color: #dedede;
+  margin: 0;
+}
+
+.footer_buttonGroup a {
+  font-size: $icon-font-size;
+  color: #dedede;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}

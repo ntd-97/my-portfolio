@@ -1,0 +1,35 @@
+@use "./variables" as *;
+
+.contact {
+  padding-top: 9vh;
+}
+
+.contact__spec {
+  font-size: 2rem;
+  color: #dedede;
+  text-align: center;
+}
+
+.contact__mailBtn {
+  min-width: 200px;
+  width: 50%;
+  text-align: center;
+  color: #dedede;
+  background-color: #161b22;
+  font-size: $button-font-size;
+  transition: all 0.2s linear;
+  border: none;
+  border-radius: 15px;
+
+  &:hover {
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+  }
+}
+
+.contact__mailIcon {
+  vertical-align: top;
+  font-size: $icon-font-size;
+  width: 50px;
+}
