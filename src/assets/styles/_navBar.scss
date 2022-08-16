@@ -1,7 +1,11 @@
 @use "./variables" as *;
+
 .navbar {
-  background-color: #323232;
-  opacity: 95%;
+  background-color: rgb(50, 50, 50, 0.5);
+  transition: all 0.2s ease;
+}
+.navbar--bgColor {
+  background-color: rgb(50, 50, 50);
 }
 
 .navbar__brand {
@@ -50,11 +54,15 @@
 .navbar__button {
   border: none;
   &:focus {
-    border: none;
+    box-shadow: none;
   }
 }
 
 .navbar__icon {
   color: $text-light-color;
   font-size: $icon-font-size;
+}
+
+.navbar__link.active {
+  color: #fff !important;
 }

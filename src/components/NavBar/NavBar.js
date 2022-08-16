@@ -1,9 +1,22 @@
+import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { CgMenuRight } from "react-icons/cg";
 
 const NavBar = () => {
+  const [bgColor, setbgColor] = useState("");
+
+  const windowScrollHandler = () => {
+    if (window.scrollY >= 86) {
+      setbgColor("navbar--bgColor");
+    } else {
+      setbgColor("");
+    }
+  };
+
+  window.addEventListener("scroll", windowScrollHandler);
+
   return (
-    <Navbar fixed="top" expand="sm" className="navbar py-0">
+    <Navbar fixed="top" expand="sm" className={`navbar py-0 ${bgColor}`}>
       <Container className="px-0">
         <Navbar.Brand href="#home" className="navbar__brand">
           <svg
@@ -34,7 +47,7 @@ const NavBar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="justify-content-end test-nav">
-            <Nav.Link eventKey="demo1" href="#about" className="navbar__link">
+            <Nav.Link href="#about" className="navbar__link">
               About
             </Nav.Link>
             <Nav.Link href="#experiences" className="navbar__link">
