@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.bd759216.css",
-    "main.js": "/static/js/main.74a25f0c.js",
-    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
-    "static/media/LexendDeca-VariableFont_wght.ttf": "/static/media/LexendDeca-VariableFont_wght.85a26ab7491852266e9b.ttf",
-    "static/media/avatar.jpg": "/static/media/avatar.645bdd7350549a5236f2.jpg",
-    "index.html": "/index.html",
-    "main.bd759216.css.map": "/static/css/main.bd759216.css.map",
-    "main.74a25f0c.js.map": "/static/js/main.74a25f0c.js.map",
-    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
+    "main.css": "/my-portfolio/static/css/main.2490d48b.css",
+    "main.js": "/my-portfolio/static/js/main.91eb77a8.js",
+    "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
+    "static/media/LexendDeca-VariableFont_wght.ttf": "/my-portfolio/static/media/LexendDeca-VariableFont_wght.85a26ab7491852266e9b.ttf",
+    "static/media/avatar.jpg": "/my-portfolio/static/media/avatar.645bdd7350549a5236f2.jpg",
+    "index.html": "/my-portfolio/index.html",
+    "main.2490d48b.css.map": "/my-portfolio/static/css/main.2490d48b.css.map",
+    "main.91eb77a8.js.map": "/my-portfolio/static/js/main.91eb77a8.js.map",
+    "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd759216.css",
-    "static/js/main.74a25f0c.js"
+    "static/css/main.2490d48b.css",
+    "static/js/main.91eb77a8.js"
   ]
 }
