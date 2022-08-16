@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.2490d48b.css",
-    "main.js": "/my-portfolio/static/js/main.91eb77a8.js",
+    "main.css": "/my-portfolio/static/css/main.80b213e1.css",
+    "main.js": "/my-portfolio/static/js/main.1671b832.js",
     "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/LexendDeca-VariableFont_wght.ttf": "/my-portfolio/static/media/LexendDeca-VariableFont_wght.85a26ab7491852266e9b.ttf",
     "static/media/avatar.jpg": "/my-portfolio/static/media/avatar.645bdd7350549a5236f2.jpg",
     "index.html": "/my-portfolio/index.html",
-    "main.2490d48b.css.map": "/my-portfolio/static/css/main.2490d48b.css.map",
-    "main.91eb77a8.js.map": "/my-portfolio/static/js/main.91eb77a8.js.map",
+    "main.80b213e1.css.map": "/my-portfolio/static/css/main.80b213e1.css.map",
+    "main.1671b832.js.map": "/my-portfolio/static/js/main.1671b832.js.map",
     "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2490d48b.css",
-    "static/js/main.91eb77a8.js"
+    "static/css/main.80b213e1.css",
+    "static/js/main.1671b832.js"
   ]
 }
