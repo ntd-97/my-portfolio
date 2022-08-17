@@ -2,16 +2,16 @@
 
 .projects {
   padding-top: 18vh;
-}
 
-.projects__year {
-  display: block;
-  font-size: $year-font-size;
-  color: #dedede;
-}
+  &__year {
+    display: block;
+    font-size: $year-font-size;
+    color: #dedede;
+  }
 
-.projects__breakLine {
-  width: 100%;
-  background-color: #dedede;
-  height: 5px;
+  &__breakLine {
+    width: 100%;
+    background-color: #dedede;
+    height: 5px;
+  }
 }

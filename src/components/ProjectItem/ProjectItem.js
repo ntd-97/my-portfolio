@@ -16,11 +16,11 @@ const ProjectItem = () => {
           ></img>
         </Col>
         <Col lg={7} xl={8}>
-          <Container className="projects_details p-0 p-lg-4 d-flex flex-column justify-content-between">
+          <Container className="projectItem__details p-0 p-lg-4 d-flex flex-column justify-content-between">
             <h3 className="project__heading">Sale Order Systems</h3>
             <Container className="project__specs p-0">
               <p>
-                Technical: <span>VB6, VB.Net, SVN, Postgresql</span>{" "}
+                Technical: <span>VB6, VB.Net, SVN, Postgresql</span>
               </p>
               <p>
                 Role: <span>Tester</span>

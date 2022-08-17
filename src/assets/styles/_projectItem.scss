@@ -6,71 +6,71 @@
   background-color: #303030;
   border-radius: 2.5rem;
   opacity: 80%;
-}
 
-.projects_details{
-height: 100%;
-}
-
-.project__heading {
-  font-size: $header-project-font-size;
-}
-
-.project__specs {
-  text-align: justify;
-  font-size: $default-font-size;
-}
-
-.projectItem__btnGroup {
-  display: flex;
-  justify-content: space-between;
-}
-
-.projectItem__gitBtn {
-  text-align: center;
-  text-decoration: none;
-  color: #dedede;
-  display: inline-block;
-  padding: 10px 10px 10px 0;
-  min-width: 160px;
-  width: 25%;
-  background-color: #161b22;
-  font-size: $button-font-size;
-  margin-right: 5%;
-  transition: all 0.2s linear;
-  border: none;
-  border-radius: 15px;
-
-  &:hover {
-    color: white;
-    background-color: black;
-    opacity: 0.8;
+  &__details {
+    height: 100%;
   }
-}
 
-.projectItem__gitIcon {
-  vertical-align: top;
-  font-size: $icon-font-size;
-  width: 50px;
-}
-
-.projectItem__demoBtn {
-  width: 20%;
-  text-align: right;
-  text-decoration: none;
-  color: #dedede;
-  display: inline-block;
-  font-size: 3.3rem;
-  background-color: transparent;
-  transition: all 0.2s linear;
-  &:hover {
-    color: black;
-    opacity: 0.8;
+  .project__heading {
+    font-size: $header-project-font-size;
   }
-}
 
-.projectItem__img {
-  width: 100%;
-  border-radius: 1.5rem;
-  object-fit: fill;
+  .project__specs {
+    text-align: justify;
+    font-size: $default-font-size;
+  }
+
+  &__btnGroup {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__gitBtn {
+    text-align: center;
+    text-decoration: none;
+    color: #dedede;
+    display: inline-block;
+    padding: 10px 10px 10px 0;
+    min-width: 160px;
+    width: 25%;
+    background-color: #161b22;
+    font-size: $button-font-size;
+    margin-right: 5%;
+    transition: all 0.2s linear;
+    border: none;
+    border-radius: 15px;
+
+    &:hover {
+      color: white;
+      background-color: black;
+      opacity: 0.8;
+    }
+  }
+
+  &__gitIcon {
+    vertical-align: top;
+    font-size: $icon-font-size;
+    width: 50px;
+  }
+
+  &__demoBtn {
+    width: 20%;
+    text-align: right;
+    text-decoration: none;
+    color: #dedede;
+    display: inline-block;
+    font-size: 3.3rem;
+    background-color: transparent;
+    transition: all 0.2s linear;
+    &:hover {
+      color: black;
+      opacity: 0.8;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 1.5rem;
+    object-fit: fill;
+  }
 }

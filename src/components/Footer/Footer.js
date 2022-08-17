@@ -11,7 +11,7 @@ const Footer = () => {
             xs={12}
             md={6}
             lg={4}
-            className="d-flex justify-content-center justify-content-md-start footer_copyRight"
+            className="d-flex justify-content-center justify-content-md-start footer__copyRight"
           >
             <p>
               Make by <strong>Me</strong> - Copy rigth 2022.
@@ -21,7 +21,7 @@ const Footer = () => {
             xs={12}
             md={4}
             lg={3}
-            className="d-flex justify-content-center justify-content-md-end footer_buttonGroup"
+            className="d-flex justify-content-center justify-content-md-end footer__buttonGroup"
           >
             <a href="git" className="me-4">
               <BsGithub />

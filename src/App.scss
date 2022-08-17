@@ -1,11 +1,11 @@
-@use "./assets/styles/navBar";
-@use "./assets/styles/banner";
-@use "./assets/styles/projectsList";
-@use "./assets/styles/projectItem";
-@use "./assets/styles/contact";
-@use "./assets/styles/footer";
 @use "./assets/styles/variables" as *;
 @import "normalize.css";
+@import "./assets/styles/navBar";
+@import "./assets/styles/banner";
+@import "./assets/styles/projectsList";
+@import "./assets/styles/projectItem";
+@import "./assets/styles/contact";
+@import "./assets/styles/footer";
 
 @font-face {
   font-family: Lexend Deca;
