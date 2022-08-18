@@ -1,7 +1,11 @@
 @use "./assets/styles/variables" as *;
 @import "normalize.css";
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 @import "./assets/styles/navBar";
 @import "./assets/styles/banner";
+@import "./assets/styles/about";
+@import "./assets/styles/skills";
 @import "./assets/styles/projectsList";
 @import "./assets/styles/projectItem";
 @import "./assets/styles/contact";
@@ -22,6 +26,7 @@ html {
 }
 
 body {
+  color: #dedede;
   background-color: #202020;
   font-size: $default-font-size;
   font-family: "Lexend Deca", sans-serif !important;
@@ -34,7 +39,6 @@ body {
 ::-webkit-scrollbar-track {
   background-color: #dedede;
   border-radius: 1rem;
-  margin-block: 0.5rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -46,7 +50,11 @@ body {
 
 .common__heading {
   font-size: $header-part-font-size;
-  color: #dedede;
   text-align: center;
   margin-bottom: 6%;
+}
+.common__card{
+height: 100%;
+  background-color: #2C2C2C;
+  border-radius: 2.5rem;
 }

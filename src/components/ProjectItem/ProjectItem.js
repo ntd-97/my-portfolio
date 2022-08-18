@@ -6,7 +6,7 @@ import DemoImg from "../../assets/images/demo_img_project.png";
 
 const ProjectItem = () => {
   return (
-    <Container className="projectItem p-4 d-flex flex-wrap flex-md-nowrap">
+    <Container className="common__card projectItem p-4 d-flex flex-wrap flex-md-nowrap">
       <Row>
         <Col lg={5} xl={4}>
           <img

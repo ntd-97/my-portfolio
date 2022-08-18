@@ -1,0 +1,17 @@
+.skills {
+  padding-top: 18vh;
+
+  &__item {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    filter: grayscale(1);
+    transition: all 0.3s ease;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  & img {
+    width: 40%;
+  }
+}

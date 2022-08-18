@@ -1,22 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { CgMenuRight } from "react-icons/cg";
 
 const NavBar = () => {
-  const [bgColor, setbgColor] = useState("");
+  const [bgColorSolid, setbgColorSolid] = useState("");
+  const [expanded, setExpanded] = useState(false);
 
   const windowScrollHandler = () => {
     if (window.scrollY >= 86) {
-      setbgColor("navbar--bgColor");
+      setbgColorSolid("navbar--bgColorSolid");
     } else {
-      setbgColor("");
+      setbgColorSolid("");
     }
   };
 
-  window.addEventListener("scroll", windowScrollHandler);
+  useEffect(() => {
+    window.addEventListener("scroll", windowScrollHandler);
+  }, []);
+
+  const onclickLinkHandler = () => {
+    setExpanded(false);
+  };
+
+  const onClickToggleBtnHandler = () => {
+    setExpanded(!expanded);
+  };
 
   return (
-    <Navbar fixed="top" expand="sm" className={`navbar py-0 ${bgColor}`}>
+    <Navbar
+      fixed="top"
+      expand="sm"
+      expanded={expanded}
+      className={`navbar py-0 ${bgColorSolid}`}
+    >
       <Container className="px-0">
         <Navbar.Brand href="#home" className="navbar__brand">
           <svg
@@ -41,19 +57,39 @@ const NavBar = () => {
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className="navbar__button"
+          onClick={onClickToggleBtnHandler}
         >
           <CgMenuRight className="navbar__icon" />
         </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="justify-content-end test-nav">
-            <Nav.Link href="#about" className="navbar__link">
+            <Nav.Link
+              href="#about"
+              onClick={onclickLinkHandler}
+              className="navbar__link"
+            >
               About
             </Nav.Link>
-            <Nav.Link href="#experiences" className="navbar__link">
+            <Nav.Link
+              href="#skills"
+              onClick={onclickLinkHandler}
+              className="navbar__link"
+            >
+              Skills
+            </Nav.Link>
+            <Nav.Link
+              href="#experiences"
+              onClick={onclickLinkHandler}
+              className="navbar__link"
+            >
               Experiences
             </Nav.Link>
-            <Nav.Link href="#contact" className="navbar__link">
+            <Nav.Link
+              href="#contact"
+              onClick={onclickLinkHandler}
+              className="navbar__link"
+            >
               Contact
             </Nav.Link>
           </Nav>

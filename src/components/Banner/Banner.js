@@ -3,7 +3,7 @@ import AvatarImg from "../../assets/images/avatar.jpg";
 
 const Banner = () => {
   return (
-    <Container id="about">
+    <Container id="home">
       <Row xs={1} lg={2} className="banner d-flex flex-wrap-reverse">
         <Col>
           <h1 className="banner__heading">

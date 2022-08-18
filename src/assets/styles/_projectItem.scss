@@ -1,11 +1,7 @@
 @use "./variables" as *;
 
 .projectItem {
-  margin-bottom: 5%;
   color: #dedede;
-  background-color: #303030;
-  border-radius: 2.5rem;
-  opacity: 80%;
 
   &__details {
     height: 100%;

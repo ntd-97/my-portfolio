@@ -1,0 +1,22 @@
+@use "./variables" as *;
+
+.about {
+  padding-top: 18vh;
+  color: $text-light-color;
+  text-align: justify;
+
+  & h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  & .common__card div {
+    padding-left: 1rem;
+    border-left: 4px solid #dedede;
+  }
+
+  & .common__card div:nth-child(2) {
+    margin-bottom: 3rem;
+  }
+}
