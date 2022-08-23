@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.5da654b8.css",
+    "main.css": "/my-portfolio/static/css/main.6378efcf.css",
     "main.js": "/my-portfolio/static/js/main.b009b074.js",
     "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/LexendDeca-VariableFont_wght.ttf": "/my-portfolio/static/media/LexendDeca-VariableFont_wght.85a26ab7491852266e9b.ttf",
@@ -18,12 +18,12 @@
     "static/media/css.png": "/my-portfolio/static/media/css.463e319bad8e0edf1ef7.png",
     "static/media/js.png": "/my-portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/my-portfolio/index.html",
-    "main.5da654b8.css.map": "/my-portfolio/static/css/main.5da654b8.css.map",
+    "main.6378efcf.css.map": "/my-portfolio/static/css/main.6378efcf.css.map",
     "main.b009b074.js.map": "/my-portfolio/static/js/main.b009b074.js.map",
     "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5da654b8.css",
+    "static/css/main.6378efcf.css",
     "static/js/main.b009b074.js"
   ]
 }
