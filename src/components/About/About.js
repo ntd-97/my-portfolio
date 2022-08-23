@@ -25,7 +25,8 @@ const About = () => {
               <h3>Education</h3>
               <div>
                 <p className="about__year">2015 - 2019</p>
-                <p>Information technology - Can Tho University (GPA: 3.35/4)</p>
+                <p>Information technology - Can Tho University </p>
+                <p>GPA: 3.35/4</p>
               </div>
               <h3>Work Experiences</h3>
               <div>

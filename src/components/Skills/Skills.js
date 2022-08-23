@@ -10,6 +10,7 @@ import nodejsIcon from "../../assets/images/nodejs.png";
 import expressjsIcon from "../../assets/images/expressjs.png";
 import mongoIcon from "../../assets/images/mongo.png";
 import sapIcon from "../../assets/images/sap.png";
+import kintoneIcon from "../../assets/images/kintone.png";
 import sapui5Icon from "../../assets/images/sapui5.png";
 import vbIcon from "../../assets/images/vb.png";
 
@@ -25,6 +26,7 @@ const skillIcons = [
   { icon: expressjsIcon, name: "ExpressJS" },
   { icon: mongoIcon, name: "MongoDB" },
   { icon: sapIcon, name: "SAP Cloud Platform" },
+  { icon: kintoneIcon, name: "Kintone" },
   { icon: sapui5Icon, name: "SAP UI5" },
   { icon: vbIcon, name: "Visual basic" },
 ];
@@ -34,12 +36,12 @@ const Skills = () => {
     <Container id="skills" className="skills">
       <h2 className="common__heading">Skills</h2>
       <Container>
-        <Row xs={2} md={3} lg={6} className="d-flex justify-content-center">
+        <Row xs={3} lg={6} className="d-flex justify-content-center">
           {skillIcons.map((skill) => {
             return (
-              <Col className="mb-4">
+              <Col key={skill.name} className="mb-4">
                 <Container className="common__card skills__item d-flex flex-column justify-content-between align-items-center">
-                  <img src={skill.icon} fluid alt="Skill img" />
+                  <img src={skill.icon} alt="Skill img" />
                   <p className="mb-0 mt-4">{skill.name}</p>
                 </Container>
               </Col>

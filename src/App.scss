@@ -1,13 +1,12 @@
 @use "./assets/styles/variables" as *;
 @import "normalize.css";
-@import "~slick-carousel/slick/slick.css"; 
-@import "~slick-carousel/slick/slick-theme.css";
 @import "./assets/styles/navBar";
 @import "./assets/styles/banner";
 @import "./assets/styles/about";
 @import "./assets/styles/skills";
 @import "./assets/styles/projectsList";
 @import "./assets/styles/projectItem";
+@import "./assets/styles/projectItemDetails";
 @import "./assets/styles/contact";
 @import "./assets/styles/footer";
 
@@ -30,10 +29,12 @@ body {
   background-color: #202020;
   font-size: $default-font-size;
   font-family: "Lexend Deca", sans-serif !important;
+  overflow: overlay;
 }
 
 ::-webkit-scrollbar {
   width: 1.5rem;
+
 }
 
 ::-webkit-scrollbar-track {
@@ -53,8 +54,8 @@ body {
   text-align: center;
   margin-bottom: 6%;
 }
-.common__card{
-height: 100%;
-  background-color: #2C2C2C;
+.common__card {
+  height: 100%;
+  background-color: #2c2c2c;
   border-radius: 2.5rem;
 }

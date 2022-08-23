@@ -1,17 +1,89 @@
 @use "./variables" as *;
 
-.projects {
+.experiences {
   padding-top: 18vh;
+  .projects-list {
+    margin-bottom: 5%;
+    &__year {
+      display: block;
+      font-size: $year-font-size;
+      color: #dedede;
+    }
 
-  &__year {
-    display: block;
-    font-size: $year-font-size;
-    color: #dedede;
+    &__break-line {
+      width: 100%;
+      background-color: #dedede;
+      height: 5px;
+    }
+  }
+}
+
+@mixin slider-arrow-btn {
+  position: absolute;
+  z-index: 1;
+  top: 42%;
+  transform: translateY(-50%);
+  color: #dedede;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 2.5rem;
+  background-color: #2c2c2c;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #000;
   }
 
-  &__breakLine {
-    width: 100%;
-    background-color: #dedede;
-    height: 5px;
+  &[disabled] {
+    cursor: auto;
+    opacity: 0.6;
+
+    &:hover {
+      background-color: #272727;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.slider-arrow-btn {
+  &__next {
+    @include slider-arrow-btn();
+    right: -25px;
+  }
+
+  &__prev {
+    @include slider-arrow-btn();
+    left: -25px;
+  }
+}
+
+.slider-arrow-btn__icon {
+  &--next {
+    transform: translate(1px, -2px);
+  }
+  &--prev {
+    transform: translate(-1px, -2px);
+  }
+}
+
+.swiper-pagination {
+  &-style {
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+  &-bullet {
+    display: inline-block;
+    background-color: #7c7c7c;
+    transition: all 0.2s ease;
+    &-active {
+      width: 15px;
+      border-radius: 5px;
+    }
   }
 }
