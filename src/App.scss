@@ -29,11 +29,15 @@ body {
   background-color: #202020;
   font-size: $default-font-size;
   font-family: "Lexend Deca", sans-serif !important;
-  // overflow: overlay;
+  overflow: overlay;
 }
 
 ::-webkit-scrollbar {
   width: 1.5rem;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
 }
 
