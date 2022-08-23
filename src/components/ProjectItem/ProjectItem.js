@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ProjectItemDetails from "../ProjectItemDetails/ProjectItemDetails";
 import { Modal } from "react-bootstrap";
+import { CgClose } from "react-icons/cg";
 
 const ProjectItem = ({ project }) => {
   const [showDetails, setShowDeTails] = useState(false);
@@ -20,13 +21,17 @@ const ProjectItem = ({ project }) => {
       <Modal
         size="xl"
         aria-labelledby="contained-modal-title-vcenter"
-        contentClassName="contentModal"
+        contentClassName="modal__content"
         centered
         keyboard={true}
         show={showDetails}
         onHide={onclickCloseBtnHandler}
       >
         <ProjectItemDetails project={project} />
+        <CgClose
+          className="modal__close-btn"
+          onClick={onclickCloseBtnHandler}
+        />
       </Modal>
     </>
   );
