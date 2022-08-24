@@ -16,7 +16,7 @@ const ProjectItemDetails = ({ project }) => {
         </Col>
         <Col lg={7} xl={8}>
           <Container className="project-item-details__details d-flex flex-column justify-content-center">
-            <h3 className="project__heading">{project.title}</h3>
+            <h3 className="project__heading mb-4">{project.title}</h3>
             <Container className="project__specs p-0">
               <p>Technical: {project.technicals.join(", ")}</p>
               <p>Role: {project.roles}</p>
@@ -24,7 +24,7 @@ const ProjectItemDetails = ({ project }) => {
             </Container>
             <Container
               style={{ display: `${project.git ? "" : "none"}` }}
-              className="project-item-details__btnGroup p-0 mt-3 mt-xl-0"
+              className="project-item-details__btnGroup p-0 mt-3 mt-lg-4"
             >
               <a href={project.git} className="project-item-details__gitBtn">
                 <AiFillGithub className="project-item-details__gitIcon" />
