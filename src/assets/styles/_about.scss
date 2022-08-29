@@ -1,9 +1,11 @@
-@use "./variables" as *;
-
 .about {
-  padding-top: 18vh;
-  color: $text-light-color;
+  padding-top: $section-padding-top;
+  color: $light-color;
   text-align: justify;
+
+  &__description {
+    line-height: 3rem;
+  }
 
   & h3 {
     font-size: 2rem;
@@ -13,7 +15,7 @@
 
   & .common__card div {
     padding-left: 1rem;
-    border-left: 4px solid #dedede;
+    border-left: 4px solid $light-color;
   }
 
   & .common__card div:nth-child(2) {

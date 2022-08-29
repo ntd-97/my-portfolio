@@ -1,5 +1,5 @@
-// import { Button } from "react-bootstrap";
 import { Col, Container, Row } from "react-bootstrap";
+
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 
@@ -14,23 +14,32 @@ const ProjectItemDetails = ({ project }) => {
             alt=""
           ></img>
         </Col>
-        <Col lg={7} xl={8}>
+
+        <Col lg={7} xl={8} className="px-0 px-lg-1">
           <Container className="project-item-details__details d-flex flex-column justify-content-center">
             <h3 className="project__heading mb-4">{project.title}</h3>
-            <Container className="project__specs p-0">
+
+            <Container className="project__specs px-0 pe-lg-5">
               <p>Technical: {project.technicals.join(", ")}</p>
               <p>Role: {project.roles}</p>
               <p>Details: {project.details}</p>
             </Container>
+
             <Container
               style={{ display: `${project.git ? "" : "none"}` }}
               className="project-item-details__btnGroup p-0 mt-3 mt-lg-4"
             >
-              <a href={project.git} className="project-item-details__gitBtn">
+              <a
+                href={project.git}
+                className="common__btn project-item-details__gitBtn"
+              >
                 <AiFillGithub className="project-item-details__gitIcon" />
                 Git
               </a>
-              <a href={project.demo} className="project-item-details__demoBtn">
+              <a
+                href={project.demo}
+                className="project-item-details__demoBtn d-flex align-items-center justify-content-end"
+              >
                 <BsArrowRight />
               </a>
             </Container>

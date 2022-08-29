@@ -1,4 +1,7 @@
+import { motion } from "framer-motion";
+
 import { Col, Container, Row } from "react-bootstrap";
+
 import htmlIcon from "../../assets/images/html.png";
 import cssIcon from "../../assets/images/css.png";
 import jsIcon from "../../assets/images/js.png";
@@ -32,22 +35,61 @@ const skillIcons = [
 ];
 
 const Skills = () => {
+  const rowVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+  const colVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  const MotionCol = motion(Col);
+  const MotionRow = motion(Row);
+
   return (
     <Container id="skills" className="skills">
-      <h2 className="common__heading">Skills</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ duration: 0.7 }}
+        className="common__heading"
+      >
+        Kỹ năng
+      </motion.h2>
+
       <Container>
-        <Row xs={3} lg={6} className="d-flex justify-content-center">
+        <MotionRow
+          variants={rowVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.5 }}
+          xs={3}
+          md={4}
+          lg={6}
+          className="d-flex justify-content-center"
+        >
           {skillIcons.map((skill) => {
             return (
-              <Col key={skill.name} className="mb-4">
+              <MotionCol
+                variants={colVariants}
+                key={skill.name}
+                className="mb-4"
+              >
                 <Container className="common__card skills__item d-flex flex-column justify-content-between align-items-center">
                   <img src={skill.icon} alt="Skill img" />
                   <p className="mb-0 mt-4">{skill.name}</p>
                 </Container>
-              </Col>
+              </MotionCol>
             );
           })}
-        </Row>
+        </MotionRow>
       </Container>
     </Container>
   );

@@ -1,23 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { CgMenuRight } from "react-icons/cg";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [bgColorSolid, setbgColorSolid] = useState("");
   const [expanded, setExpanded] = useState(false);
 
-  const windowScrollHandler = () => {
-    if (window.scrollY >= 86) {
-      setbgColorSolid("navbar--bgColorSolid");
-    } else {
-      setbgColorSolid("");
-    }
-  };
+  let navBar = useRef();
 
+  // scroll event handler
   useEffect(() => {
+    const windowScrollHandler = () => {
+      if (window.scrollY >= navBar.current.clientHeight) {
+        setbgColorSolid("navbar--bgColorSolid");
+      } else {
+        setbgColorSolid("");
+      }
+    };
+
     window.addEventListener("scroll", windowScrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", windowScrollHandler);
+    };
   }, []);
 
+  // expend menu handler
   const onclickLinkHandler = () => {
     setExpanded(false);
   };
@@ -29,9 +38,10 @@ const NavBar = () => {
   return (
     <Navbar
       fixed="top"
-      expand="sm"
+      expand="md"
       expanded={expanded}
       className={`navbar py-0 ${bgColorSolid}`}
+      ref={navBar}
     >
       <Container className="px-0">
         <Navbar.Brand href="#home" className="navbar__brand">
@@ -63,35 +73,47 @@ const NavBar = () => {
         </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav className="justify-content-end test-nav">
-            <Nav.Link
-              href="#about"
+          <Nav className="w-100 justify-content-end">
+            <Link
+              activeClass="active"
+              spy
+              to="about"
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              About
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
+              Giới thiệu
+            </Link>
+
+            <Link
+              activeClass="active"
+              spy
+              to="skills"
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              Skills
-            </Nav.Link>
-            <Nav.Link
-              href="#experiences"
+              Kỹ Năng
+            </Link>
+
+            <Link
+              activeClass="active"
+              spy
+              to="experiences"
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              Experiences
-            </Nav.Link>
-            <Nav.Link
-              href="#contact"
+              Dự án
+            </Link>
+
+            <Link
+              activeClass="active"
+              spy
+              hashSpy={true}
+              to="contact"
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              Contact
-            </Nav.Link>
+              Liên hệ
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

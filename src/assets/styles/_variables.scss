@@ -1,7 +1,18 @@
-
 //color variable
-$text-light-color: #dedede;
-$text-dark-color: #202020;
+$btn-color: #161919;
+$dark-primary-color: #2c2c2c;
+$light-color: #dedede;
+$dark-color: #202020;
+$section-padding-top: 13.2%;
+@media only screen and (max-width: 767px) {
+    $section-padding-top: 22%;
+    #about,
+    #skills,
+    #experiences,
+    #contact {
+        padding-top: $section-padding-top;
+    }
+}
 
 //size variable
 $navbar-heigth: 86px;
@@ -11,3 +22,4 @@ $button-font-size: 2rem;
 $header-project-font-size: 2.6rem;
 $year-font-size: 2.8rem;
 $header-part-font-size: 3.6rem;
+$header-part-font-size-mobile: 3.2rem;

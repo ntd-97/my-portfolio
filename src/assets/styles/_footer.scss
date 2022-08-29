@@ -1,7 +1,5 @@
-@use "./variables" as *;
-
 .footer {
-  margin-top: 10%;
+  margin-top: 11.5%;
   border-top: 2px solid #696969;
 
   &__copyRight p {
@@ -12,10 +10,10 @@
 
   &__buttonGroup a {
     font-size: $icon-font-size;
-    color: #dedede;
+    color: $light-color;
     text-decoration: none;
     &:hover {
-      color: white;
+      color: #fff;
     }
   }
 }

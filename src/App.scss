@@ -1,5 +1,7 @@
 @use "./assets/styles/variables" as *;
+
 @import "normalize.css";
+
 @import "./assets/styles/navBar";
 @import "./assets/styles/banner";
 @import "./assets/styles/about";
@@ -25,20 +27,23 @@ html {
 }
 
 body {
+  overflow: overlay; //prevent flicker on navbar when showimg modal
+}
+
+.App {
   color: #dedede;
   background-color: #202020;
   font-size: $default-font-size;
   font-family: "Lexend Deca", sans-serif !important;
-  overflow: overlay;
 }
 
+//customize scrollbar
 ::-webkit-scrollbar {
   width: 1.5rem;
 
   @media screen and (max-width: 767px) {
     display: none;
   }
-
 }
 
 ::-webkit-scrollbar-track {
@@ -53,13 +58,36 @@ body {
   border: 2px solid #dedede;
 }
 
+//common class
 .common__heading {
   font-size: $header-part-font-size;
   text-align: center;
   margin-bottom: 6%;
+  @media (max-width: 767px) {
+    font-size: $header-part-font-size-mobile;
+    margin-bottom: 10%;
+  }
 }
+
 .common__card {
   height: 100%;
-  background-color: #2c2c2c;
+  background-color: $dark-primary-color;
   border-radius: 2.5rem;
+}
+
+.common__btn {
+  text-align: center;
+  text-decoration: none;
+  color: $light-color;
+  background-color: $btn-color;
+  font-size: $button-font-size;
+  transition: all 0.2s linear;
+  border: none;
+  border-radius: 1.5rem;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    opacity: 0.8;
+  }
 }

@@ -5,13 +5,13 @@ import Skills from "./components/Skills/Skills";
 import ProjectsList from "./components/ProjectsList/ProjectsList";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+
 import "./App.scss";
 import { Container } from "react-bootstrap";
 
-
 function App() {
   return (
-    <Container fluid className="App">
+    <Container fluid className="App p-0">
       <NavBar />
       <Banner />
       <About />

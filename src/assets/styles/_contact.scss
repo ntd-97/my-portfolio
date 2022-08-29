@@ -1,29 +1,15 @@
-@use "./variables" as *;
-
 .contact {
-  padding-top: 9vh;
+  padding-top: $section-padding-top;
 
   &__spec {
     font-size: 2rem;
-    color: #dedede;
+    color: $light-color;
     text-align: center;
   }
 
   &__mail-btn {
     width: 100%;
-    text-align: center;
-    color: #dedede;
-    background-color: #161b22;
-    font-size: $button-font-size;
-    transition: all 0.2s linear;
-    border: none;
-    border-radius: 15px;
 
-    &:hover {
-      color: white;
-      background-color: black;
-      opacity: 0.8;
-    }
     @media screen and (max-width: 767px) {
       width: 100%;
     }
@@ -36,7 +22,7 @@
   }
 
   &__img {
-    width: 90%;
+    width: 78%;
     filter: grayscale(1);
     @media screen and (max-width: 991px) {
       display: none;
@@ -45,14 +31,14 @@
 
   &__toast-msg {
     width: 100%;
-    background-color: #161b22;
+    background-color: $btn-color;
     border-radius: 10px;
   }
 
   &__toast-msg-header {
     font-size: 1.7rem;
-    color: #dedede;
-    background-color: #161b22;
+    color: $light-color;
+    background-color: $btn-color;
     border-radius: 10px;
 
     button {
@@ -64,6 +50,11 @@
     &__input {
       font-size: 1.8rem;
       border-radius: 10px;
+      border: none;
+
+      &:focus {
+        border: none;
+      }
     }
   }
 }
