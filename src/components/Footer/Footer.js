@@ -1,8 +1,14 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+
 import { Col, Container, Row } from "react-bootstrap";
+
 import { BsGithub } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <Container fluid className="footer">
       <Container>
@@ -11,7 +17,7 @@ const Footer = () => {
             xs={12}
             md={6}
             lg={4}
-            className="d-flex justify-content-center justify-content-md-start footer__copyRight"
+            className="d-flex justify-content-center justify-content-md-start footer__copy-right"
           >
             <p>
               Make by <strong>Me</strong> - Copy rigth 2022.
@@ -21,7 +27,7 @@ const Footer = () => {
             xs={12}
             md={4}
             lg={3}
-            className="d-flex justify-content-center justify-content-md-end footer__buttonGroup"
+            className={`d-flex justify-content-center justify-content-md-end footer__button-group ${theme}`}
           >
             <a href="git" className="me-4">
               <BsGithub />

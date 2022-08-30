@@ -1,7 +1,12 @@
+// import { useContext } from "react";
+// import { ThemeContext } from "../../App";
+
 import { motion } from "framer-motion";
 import { Col, Container, Row } from "react-bootstrap";
 
 const About = () => {
+  // const { theme } = useContext(ThemeContext);
+
   const MotionContainer = motion(Container);
   let boxVariants = {};
 
@@ -20,7 +25,7 @@ const About = () => {
   }
 
   return (
-    <Container id="about" className="about">
+    <Container id="about" className={`about`}>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

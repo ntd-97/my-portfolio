@@ -10,10 +10,18 @@
       color: $light-color;
     }
 
+    &__year.light {
+      color: $dark-color;
+    }
+
     &__break-line {
       width: 100%;
       background-color: $light-color;
       height: 5px;
+    }
+
+    &__break-line.light {
+      background-color: $dark-color;
     }
   }
 
@@ -55,15 +63,31 @@
   }
 }
 
+@mixin slider-arrow-btn-light {
+  color: $dark-color;
+  background-color: #f0f0f0;
+  &:hover {
+    background-color: #cecece;
+  }
+}
+
 .slider-arrow-btn {
   &__next {
     @include slider-arrow-btn();
     right: -25px;
   }
 
+  &__next.light {
+    @include slider-arrow-btn-light();
+  }
+
   &__prev {
     @include slider-arrow-btn();
     left: -25px;
+  }
+
+  &__prev.light {
+    @include slider-arrow-btn-light();
   }
 }
 

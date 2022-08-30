@@ -1,16 +1,20 @@
 .project-item {
+    cursor: pointer;
     &__heading {
         text-align: center;
         font-size: 2rem;
     }
+
     &__img {
         width: 100%;
         border-radius: 1.5rem;
         object-fit: fill;
         filter: grayscale(1);
         transition: all 0.3s ease;
+    }
 
-        &:hover {
+    &:hover {
+        .project-item__img {
             filter: grayscale(0);
         }
     }
@@ -30,11 +34,16 @@
         right: 12px;
         border-radius: 15px;
         color: $light-color;
+        cursor: pointer;
         transition: all 0.2s ease;
 
         &:hover {
             background-color: #181818;
         }
+    }
+
+    .light &__close-btn {
+        color: #646464;
     }
 
     @media screen and (max-width: 991px) {
@@ -43,6 +52,10 @@
             top: 20px;
             right: 20px;
             background-color: #181818;
+        }
+
+        .light &__close-btn {
+            color: $light-color;
         }
     }
 }

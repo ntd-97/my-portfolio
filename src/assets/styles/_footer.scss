@@ -2,18 +2,26 @@
   margin-top: 11.5%;
   border-top: 2px solid #696969;
 
-  &__copyRight p {
+  &__copy-right p {
     line-height: 5rem;
     font-size: 2rem;
     margin: 0;
   }
 
-  &__buttonGroup a {
+  &__button-group a {
     font-size: $icon-font-size;
     color: $light-color;
     text-decoration: none;
+    transition: all 0.4s ease;
     &:hover {
       color: #fff;
+    }
+  }
+
+  &__button-group.light a {
+    color: $dark-color;
+    &:hover {
+      opacity:0.8;
     }
   }
 }

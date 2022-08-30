@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
+import { ThemeContext } from "../../App";
 
 import { motion } from "framer-motion";
 
@@ -11,6 +12,8 @@ import contactImg from "../../assets/images/contact.png";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
+
   const [showSendMailMsg, setShowSendMailMsg] = useState(false);
   const [mailMsg, setMailMsg] = useState("");
 
@@ -85,7 +88,7 @@ const Contact = () => {
             transition={{ duration: 0.7 }}
             className="d-flex flex-column align-items-center justify-content-between"
           >
-            <p className="contact__spec mb-5 px-4">
+            <p className={`contact__spec ${theme} mb-5 px-4`}>
               Nếu bạn đang tìm kiếm một front-end developer. Mình hy vọng sẽ trở
               thành một thành viên của team.
             </p>

@@ -7,7 +7,6 @@
   }
 
   &__brand {
-    color: $light-color;
     @media only screen and (max-width: 767px) {
       & svg {
         width: 75%;
@@ -24,6 +23,12 @@
     line-height: $navbar-heigth;
     transition: all linear 0.2s;
     text-decoration: none;
+    cursor: pointer;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
     @media only screen and (max-width: 767px) {
       font-size: 1.8rem;
       margin-left: 7%;
@@ -51,6 +56,22 @@
     }
   }
 
+  &__theme-btn {
+    margin-left: 5%;
+    color: $light-color;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin-left: 7%;
+    }
+  }
+
   &__button {
     border: none;
     &:focus {
@@ -65,5 +86,41 @@
 
   .active {
     color: #fff !important;
+  }
+}
+
+.light .navbar {
+  background-color: rgba(235, 235, 235, 0.6);
+
+  &--bgColorSolid {
+    background-color: rgb(235, 235, 235); // change background-color when sroll
+  }
+
+  &__brand {
+    filter: invert(1);
+  }
+
+  &__link {
+    color: $dark-color;
+
+    &::after {
+      background-color: $dark-color;
+    }
+
+    &:hover {
+      color: $dark-color !important;
+    }
+  }
+
+  &__theme-btn {
+    color: $dark-color;
+  }
+
+  &__icon {
+    color: $dark-color;
+  }
+
+  .active {
+    color: rgb(100, 100, 100) !important;
   }
 }

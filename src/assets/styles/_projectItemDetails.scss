@@ -54,4 +54,16 @@
       opacity: 0.8;
     }
   }
+
+  .light &__demoBtn {
+    color: $dark-color;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.project-item-details.light {
+  color: $dark-color;
 }

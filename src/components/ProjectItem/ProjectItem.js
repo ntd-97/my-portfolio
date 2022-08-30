@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ThemeContext } from "../../App";
 
 import ProjectItemDetails from "../ProjectItemDetails/ProjectItemDetails";
 
@@ -6,6 +7,8 @@ import { Modal } from "react-bootstrap";
 import { CgClose } from "react-icons/cg";
 
 const ProjectItem = ({ project }) => {
+  const { theme } = useContext(ThemeContext);
+
   const [showDetails, setShowDeTails] = useState(false);
 
   const onClickCloseBtnHandler = () => setShowDeTails(false);
@@ -25,7 +28,7 @@ const ProjectItem = ({ project }) => {
       <Modal
         size="xl"
         aria-labelledby="contained-modal-title-vcenter"
-        contentClassName="modal__content"
+        contentClassName={`modal__content ${theme}`}
         centered
         keyboard={true}
         show={showDetails}

@@ -1,9 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useContext } from "react";
+import { ThemeContext } from "../../App";
+
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { BsSunFill, BsMoonFill } from "react-icons/bs";
 import { CgMenuRight } from "react-icons/cg";
 import { Link } from "react-scroll";
 
 const NavBar = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   const [bgColorSolid, setbgColorSolid] = useState("");
   const [expanded, setExpanded] = useState(false);
 
@@ -40,7 +45,7 @@ const NavBar = () => {
       fixed="top"
       expand="md"
       expanded={expanded}
-      className={`navbar py-0 ${bgColorSolid}`}
+      className={`navbar ${theme} py-0 ${bgColorSolid}`}
       ref={navBar}
     >
       <Container className="px-0">
@@ -114,6 +119,32 @@ const NavBar = () => {
             >
               Liên hệ
             </Link>
+
+            <div className="navbar__theme-btn d-flex flex-column justify-content-center pt-4 pb-5 p-md-0">
+              <BsSunFill
+                style={{
+                  opacity: `${theme === "dark" ? "1" : "0"}`,
+                  height: `${theme === "dark" ? "100%" : "0"}`,
+                  transition: "all 1s ease",
+                }}
+                onClick={() => {
+                  onclickLinkHandler();
+                  toggleTheme();
+                }}
+              />
+              <BsMoonFill
+                style={{
+                  fontSize: "2rem",
+                  opacity: `${theme === "light" ? "1" : "0"}`,
+                  height: `${theme === "light" ? "100%" : "0"}`,
+                  transition: "all 1s ease",
+                }}
+                onClick={() => {
+                  onclickLinkHandler();
+                  toggleTheme();
+                }}
+              />
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>

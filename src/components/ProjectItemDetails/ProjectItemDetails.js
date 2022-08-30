@@ -1,11 +1,18 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+
 import { Col, Container, Row } from "react-bootstrap";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 
 const ProjectItemDetails = ({ project }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <Container className="common__card project-item-details p-4 d-flex flex-wrap flex-md-nowrap">
+    <Container
+      className={`common__card project-item-details ${theme} p-4 d-flex flex-wrap flex-md-nowrap`}
+    >
       <Row>
         <Col lg={5} xl={4} className="d-flex align-items-center">
           <img

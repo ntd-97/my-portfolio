@@ -1,9 +1,10 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 
 import { motion } from "framer-motion";
 
 import { Col, Container, Row } from "react-bootstrap";
 
+import { ThemeContext } from "../../App";
 import ProjectItem from "../ProjectItem/ProjectItem";
 
 import { Pagination, Navigation } from "swiper";
@@ -17,6 +18,8 @@ import { FaLessThan, FaGreaterThan } from "react-icons/fa";
 import { workExperiences } from "../../assets/mock_data";
 
 const ProjectsList = () => {
+  const { theme } = useContext(ThemeContext);
+
   const swiperRef = useRef();
   const swiperResponsiveConfig = {
     992: {
@@ -79,7 +82,9 @@ const ProjectsList = () => {
               md={2}
               lg={1}
             >
-              <h3 className="projects-list__year">{workExYear.year}</h3>
+              <h3 className={`projects-list__year ${theme}`}>
+                {workExYear.year}
+              </h3>
             </MotionCol>
             <MotionCol
               variants={projectVarians}
@@ -92,7 +97,7 @@ const ProjectsList = () => {
               lg={11}
               className="d-flex align-items-center"
             >
-              <div className="projects-list__break-line"></div>
+              <div className={`projects-list__break-line ${theme}`}></div>
             </MotionCol>
           </Row>
 
@@ -134,7 +139,7 @@ const ProjectsList = () => {
 
             {/* custom navigation button */}
             <button
-              className={`slider-arrow-btn__prev btnPrev-${workExYear.year}`}
+              className={`slider-arrow-btn__prev btnPrev-${workExYear.year} ${theme}`}
               onClick={() => {
                 swiperRef.current.slidePrev();
               }}
@@ -142,7 +147,7 @@ const ProjectsList = () => {
               <FaLessThan className="slider-arrow-btn__icon--prev" />
             </button>
             <button
-              className={`slider-arrow-btn__next btnNext-${workExYear.year}`}
+              className={`slider-arrow-btn__next btnNext-${workExYear.year} ${theme}`}
               onClick={() => {
                 swiperRef.current.slideNext();
               }}

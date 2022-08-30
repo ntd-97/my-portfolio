@@ -1,9 +1,14 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
+
 import { motion } from "framer-motion";
 
 import { Row, Col, Container } from "react-bootstrap";
 import AvatarImg from "../../assets/images/avatar.jpg";
 
 const Banner = () => {
+  const { theme } = useContext(ThemeContext);
+
   const bannerVariants = {
     show: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: 50 },
@@ -28,7 +33,7 @@ const Banner = () => {
             initial="hidden"
             animate="show"
             transition={{ duration: 1.5 }}
-            className="banner__spec  px-3 px-md-0"
+            className={`banner__spec ${theme}  px-3 px-md-0`}
           >
             Sau hơn 2 năm làm việc với vị trí developer. Mình nhận ra lập trình
             Frontend là thứ kiến mình thích thú nhất. Mình mong với những kiến

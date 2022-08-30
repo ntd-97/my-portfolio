@@ -35,6 +35,21 @@ body {
   background-color: #202020;
   font-size: $default-font-size;
   font-family: "Lexend Deca", sans-serif !important;
+  transition: color 0.7s, background-color 0.7s;
+}
+
+.App.light {
+  color: #202020;
+  background-color: #fefefe;
+}
+
+//customize selection text
+::selection {
+  background: #000;
+}
+
+.light ::selection {
+  background: #dedede;
 }
 
 //customize scrollbar
@@ -73,6 +88,10 @@ body {
   height: 100%;
   background-color: $dark-primary-color;
   border-radius: 2.5rem;
+}
+
+.light .common__card {
+  background-color: rgb(240, 240, 240);
 }
 
 .common__btn {
