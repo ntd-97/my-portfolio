@@ -15,7 +15,7 @@
     width: 40%;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: $max-width-small) {
     font-size: 1.5rem;
 
     & img {

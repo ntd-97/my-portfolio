@@ -46,7 +46,7 @@
         color: #646464;
     }
 
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $max-width-medium) {
         &__close-btn {
             font-size: 3rem;
             top: 20px;

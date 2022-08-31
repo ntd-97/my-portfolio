@@ -3,6 +3,7 @@
 @import "normalize.css";
 
 @import "./assets/styles/navBar";
+@import "./assets/styles/featureBtn";
 @import "./assets/styles/banner";
 @import "./assets/styles/about";
 @import "./assets/styles/skills";
@@ -31,15 +32,15 @@ body {
 }
 
 .App {
-  color: #dedede;
-  background-color: #202020;
+  color: $light-color;
+  background-color: $dark-color;
   font-size: $default-font-size;
   font-family: "Lexend Deca", sans-serif !important;
   transition: color 0.7s, background-color 0.7s;
 }
 
 .App.light {
-  color: #202020;
+  color: $dark-color;
   background-color: #fefefe;
 }
 
@@ -49,28 +50,28 @@ body {
 }
 
 .light ::selection {
-  background: #dedede;
+  background: $light-color;
 }
 
 //customize scrollbar
 ::-webkit-scrollbar {
   width: 1.5rem;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $max-width-small) {
     display: none;
   }
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #dedede;
+  background-color: $light-color;
   border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
   height: 20vh;
-  background-color: #202020;
+  background-color: $dark-color;
   border-radius: 1.5rem;
-  border: 2px solid #dedede;
+  border: 2px solid $light-color;
 }
 
 //common class
@@ -78,7 +79,8 @@ body {
   font-size: $header-part-font-size;
   text-align: center;
   margin-bottom: 6%;
-  @media (max-width: 767px) {
+
+  @media (max-width: $max-width-small) {
     font-size: $header-part-font-size-mobile;
     margin-bottom: 10%;
   }
@@ -91,7 +93,7 @@ body {
 }
 
 .light .common__card {
-  background-color: rgb(240, 240, 240);
+  background-color: #f0f0f0;
 }
 
 .common__btn {
@@ -109,4 +111,11 @@ body {
     background-color: #000;
     opacity: 0.8;
   }
+}
+
+//set style for input autofill
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px #fff inset;
 }

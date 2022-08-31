@@ -1,10 +1,7 @@
 import { useRef, useContext } from "react";
 
-import { motion } from "framer-motion";
-
 import { Col, Container, Row } from "react-bootstrap";
 
-import { ThemeContext } from "../../App";
 import ProjectItem from "../ProjectItem/ProjectItem";
 
 import { Pagination, Navigation } from "swiper";
@@ -17,10 +14,19 @@ import { FaLessThan, FaGreaterThan } from "react-icons/fa";
 
 import { workExperiences } from "../../assets/mock_data";
 
+import { ThemeContext } from "../../App";
+
+import { motion } from "framer-motion";
+
+import { useTranslation } from "react-i18next";
+
 const ProjectsList = () => {
   const { theme } = useContext(ThemeContext);
 
+  const { t } = useTranslation();
+
   const swiperRef = useRef();
+
   const swiperResponsiveConfig = {
     992: {
       slidesPerView: 4,
@@ -42,8 +48,10 @@ const ProjectsList = () => {
 
   const MotionCol = motion(Col);
   const MotionRow = motion(Row);
+
   let projectVarians = {};
 
+  //change variant according to screen width
   if (window.innerWidth < 1200) {
     projectVarians = {
       hideLeft: { opacity: 0 },
@@ -67,7 +75,7 @@ const ProjectsList = () => {
         transition={{ duration: 0.7 }}
         className="common__heading"
       >
-        Dự án
+        {t("navbar.projects")}
       </motion.h2>
       {workExperiences.map((workExYear) => (
         <Container key={workExYear.year} className="projects-list">

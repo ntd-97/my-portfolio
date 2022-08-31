@@ -4,15 +4,6 @@ $dark-primary-color: #2c2c2c;
 $light-color: #dedede;
 $dark-color: #202020;
 $section-padding-top: 20.2vh;
-@media only screen and (max-width: 767px) {
-    $section-padding-top: 22%;
-    #about,
-    #skills,
-    #experiences,
-    #contact {
-        padding-top: $section-padding-top;
-    }
-}
 
 //size variable
 $navbar-heigth: 86px;
@@ -23,3 +14,26 @@ $header-project-font-size: 2.6rem;
 $year-font-size: 2.8rem;
 $header-part-font-size: 3.6rem;
 $header-part-font-size-mobile: 3.2rem;
+$max-width-small: 767px;
+$max-width-medium: 991px;
+
+@media only screen and (max-width: $max-width-medium) {
+    $section-padding-top: 15%;
+    #about,
+    #skills,
+    #experiences,
+    #contact {
+        padding-top: $section-padding-top;
+    }
+}
+
+@media only screen and (max-width: $max-width-small) {
+    $section-padding-top: 22%;
+    #about,
+    #skills,
+    #experiences,
+    #contact {
+        padding-top: $section-padding-top;
+    }
+}
+

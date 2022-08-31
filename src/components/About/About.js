@@ -1,15 +1,17 @@
-// import { useContext } from "react";
-// import { ThemeContext } from "../../App";
-
-import { motion } from "framer-motion";
 import { Col, Container, Row } from "react-bootstrap";
 
-const About = () => {
-  // const { theme } = useContext(ThemeContext);
+import { motion } from "framer-motion";
 
+import { useTranslation } from "react-i18next";
+
+const About = () => {
   const MotionContainer = motion(Container);
+
   let boxVariants = {};
 
+  const { t } = useTranslation();
+
+  // change variant according to screen width
   if (window.innerWidth < 1200) {
     boxVariants = {
       hideLeft: { opacity: 0, y: 20 },
@@ -33,7 +35,7 @@ const About = () => {
         transition={{ duration: 0.7 }}
         className="common__heading"
       >
-        Giới thiệu
+        {t("about.heading")}
       </motion.h2>
 
       <Container>
@@ -47,16 +49,8 @@ const About = () => {
               transition={{ duration: 0.7 }}
               className="p-5 common__card"
             >
-              <h3>Một vài điều về mình</h3>
-              <p className="about__description">
-                Mình là Nguyễn Tấn Đạt, tốt nghiệp ngành Công Nghệ thông tin -
-                Đại học Cần Thơ. Mình có hơn hai năm làm việc cho một công ty
-                outsourcing ở cả vị trí developer và tester. Sau khoảng thời
-                gian đó mình nhận thấy lập trình giao diện web, app là thứ mình
-                thích nhất. Do đó mình đã dành nhiều hơn thời gian và tâm huyết
-                cho nó. Mình là người hòa đồng, có tinh thần trách nhiệm cao và
-                luôn học hỏi để nâng cao kiến thức, kỹ năng của bản thân.
-              </p>
+              <h3>{t("about.specHeading")}</h3>
+              <p className="about__description">{t("about.spec")}</p>
             </MotionContainer>
           </Col>
 
@@ -69,16 +63,18 @@ const About = () => {
               transition={{ duration: 0.7 }}
               className="p-5 common__card"
             >
-              <h3>Học vấn</h3>
+              <h3>{t("about.education")}</h3>
               <div>
                 <p className="about__year">2015 - 2019</p>
-                <p>Công nghệ thông tin - Đại học Cần Thơ </p>
+                <p>
+                  {t("about.major")} - {t("about.university")}{" "}
+                </p>
                 <p>GPA: 3.35/4</p>
               </div>
-              <h3>Kinh nghiệm làm việc</h3>
+              <h3>{t("about.experiences")}</h3>
               <div>
                 <p className="about__year">2020 - 2022</p>
-                <p>Invidual Systems Company</p>
+                <p>{t("about.company1")}</p>
               </div>
             </MotionContainer>
           </Col>

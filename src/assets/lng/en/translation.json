@@ -1,0 +1,42 @@
+{
+    "banner": {
+        "heading": "Hi, I am Dat A Developer",
+        "title": "After more than two years of working as a developer, I realized that Frontend programming is what I enjoy the most. So I hope I can contribute something to the team with my current knowledge."
+    },
+    "navbar": {
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "about": {
+        "heading": "About Me",
+        "specHeading": "Something about me",
+        "spec": "I'm Nguyen Tan Dat, graduated in Information Technology - from Can Tho University. I have more than two years of working for an outsourcing company in both developer and tester positions. After that time, I realized that programming web interfaces and app interfaces are what I like the most. So I spent more time and effort on it. I am a friendly person with a high sense of responsibility and always learn to improve my knowledge and skills.",
+        "education": "Education",
+        "major": "Information technology",
+        "university": "Can Tho University",
+        "experiences": "Work Experiences",
+        "company1": "Invidual Systems Company"
+    },
+    "skills": {
+        "tSkills": "Technical Skills"
+    },
+    "projectSpec": {
+        "technical": "Technicals: ",
+        "role": "Role: ",
+        "details": "Details: "
+    },
+    "contact": {
+        "title": "If you are looking for a front-end developer, I hope to become a member of your team.",
+        "name": "Your Name",
+        "email": "Your email",
+        "messages": "Messages",
+        "enterName": "Enter your name",
+        "enterEmail": "Enter your email",
+        "enterMessage": "Enter messages",
+        "sendMail": "Send",
+        "sendMailSuccess": "Email sent successfully!",
+        "sendMailFail": "Email sending failed!"
+    }
+}

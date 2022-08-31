@@ -1,4 +1,6 @@
-import DemoImg from "../assets/images/projects/demo_img_project.png";
+import MyPortfolio from "../assets/images/projects/my-portfolio.png";
+import YelpCamp from "../assets/images/projects/yelpcamp.png";
+import NgotBand from "../assets/images/projects/ngot-band.png";
 import SmartHome from "../assets/images/projects/smart_home.png";
 import ErrorSys from "../assets/images/projects/error_system.png";
 import PrintSys from "../assets/images/projects/print_system.png";
@@ -13,7 +15,7 @@ export const workExperiences = [
     projects: [
       {
         title: "My Portfolio",
-        img: DemoImg,
+        img: MyPortfolio,
         technicals: [
           "HTML",
           "SCSS",
@@ -31,7 +33,7 @@ export const workExperiences = [
       },
       {
         title: "YelpCamp",
-        img: DemoImg,
+        img: YelpCamp,
         technicals: [
           "EJS",
           "CSS",
@@ -51,7 +53,7 @@ export const workExperiences = [
       },
       {
         title: "Ngọt Band",
-        img: DemoImg,
+        img: NgotBand,
         technicals: ["HTML", "CSS", "Javascript"],
         roles: "Developer",
         details:

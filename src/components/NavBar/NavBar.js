@@ -1,15 +1,24 @@
 import { useEffect, useRef, useState, useContext } from "react";
-import { ThemeContext } from "../../App";
 
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { BsSunFill, BsMoonFill } from "react-icons/bs";
+
 import { CgMenuRight } from "react-icons/cg";
+
 import { Link } from "react-scroll";
 
+import FeatureBtn from "../FeatureBtn/FeatureBtn";
+
+import { ThemeContext } from "../../App";
+
+import { useTranslation } from "react-i18next";
+
 const NavBar = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
+
+  const { t } = useTranslation("translation");
 
   const [bgColorSolid, setbgColorSolid] = useState("");
+
   const [expanded, setExpanded] = useState(false);
 
   let navBar = useRef();
@@ -77,8 +86,8 @@ const NavBar = () => {
           <CgMenuRight className="navbar__icon" />
         </Navbar.Toggle>
 
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav className="w-100 justify-content-end">
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="w-100 justify-content-end align-items-md-center">
             <Link
               activeClass="active"
               spy
@@ -86,7 +95,7 @@ const NavBar = () => {
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              Giới thiệu
+              {t("navbar.about")}
             </Link>
 
             <Link
@@ -96,7 +105,7 @@ const NavBar = () => {
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              Kỹ Năng
+              {t("navbar.skills")}
             </Link>
 
             <Link
@@ -106,7 +115,7 @@ const NavBar = () => {
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              Dự án
+              {t("navbar.projects")}
             </Link>
 
             <Link
@@ -117,34 +126,10 @@ const NavBar = () => {
               onClick={onclickLinkHandler}
               className="navbar__link"
             >
-              Liên hệ
+              {t("navbar.contact")}
             </Link>
 
-            <div className="navbar__theme-btn d-flex flex-column justify-content-center pt-4 pb-5 p-md-0">
-              <BsSunFill
-                style={{
-                  opacity: `${theme === "dark" ? "1" : "0"}`,
-                  height: `${theme === "dark" ? "100%" : "0"}`,
-                  transition: "all 1s ease",
-                }}
-                onClick={() => {
-                  onclickLinkHandler();
-                  toggleTheme();
-                }}
-              />
-              <BsMoonFill
-                style={{
-                  fontSize: "2rem",
-                  opacity: `${theme === "light" ? "1" : "0"}`,
-                  height: `${theme === "light" ? "100%" : "0"}`,
-                  transition: "all 1s ease",
-                }}
-                onClick={() => {
-                  onclickLinkHandler();
-                  toggleTheme();
-                }}
-              />
-            </div>
+            <FeatureBtn onclickLinkHandler={onclickLinkHandler} />
           </Nav>
         </Navbar.Collapse>
       </Container>

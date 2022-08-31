@@ -1,13 +1,22 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
 
 import { Col, Container, Row } from "react-bootstrap";
 
 import { AiFillGithub } from "react-icons/ai";
 import { BsArrowRight } from "react-icons/bs";
 
+import { ThemeContext } from "../../App";
+
+import { LanguageContext } from "../../App";
+
+import { useTranslation } from "react-i18next";
+
 const ProjectItemDetails = ({ project }) => {
   const { theme } = useContext(ThemeContext);
+
+  const { language } = useContext(LanguageContext);
+
+  const { t } = useTranslation();
 
   return (
     <Container
@@ -23,13 +32,21 @@ const ProjectItemDetails = ({ project }) => {
         </Col>
 
         <Col lg={7} xl={8} className="px-0 px-lg-1">
-          <Container className="project-item-details__details d-flex flex-column justify-content-center">
+          <Container className="project-item-details__details d-flex flex-column justify-content-start">
             <h3 className="project__heading mb-4">{project.title}</h3>
 
             <Container className="project__specs px-0 pe-lg-5">
-              <p>Technical: {project.technicals.join(", ")}</p>
-              <p>Role: {project.roles}</p>
-              <p>Details: {project.details}</p>
+              <p>
+                <strong>{t("projectSpec.technical")}</strong>
+                {project.technicals.join(", ")}
+              </p>
+              <p>
+                <strong>{t("projectSpec.role")}</strong> {project.roles}
+              </p>
+              <span>
+                <strong>{t("projectSpec.details")}</strong>
+              </span>
+              <p>{language === "en" ? project.details_en : project.details}</p>
             </Container>
 
             <Container
@@ -38,6 +55,8 @@ const ProjectItemDetails = ({ project }) => {
             >
               <a
                 href={project.git}
+                target="_blank"
+                rel="noreferrer"
                 className="common__btn project-item-details__gitBtn"
               >
                 <AiFillGithub className="project-item-details__gitIcon" />
@@ -45,6 +64,8 @@ const ProjectItemDetails = ({ project }) => {
               </a>
               <a
                 href={project.demo}
+                target="_blank"
+                rel="noreferrer"
                 className="project-item-details__demoBtn d-flex align-items-center justify-content-end"
               >
                 <BsArrowRight />

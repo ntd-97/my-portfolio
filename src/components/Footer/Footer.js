@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
 
 import { Col, Container, Row } from "react-bootstrap";
 
 import { BsGithub } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
+
+import { ThemeContext } from "../../App";
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
@@ -29,10 +30,19 @@ const Footer = () => {
             lg={3}
             className={`d-flex justify-content-center justify-content-md-end footer__button-group ${theme}`}
           >
-            <a href="git" className="me-4">
+            <a
+              href="https://github.com/ntd-97"
+              target="_blank"
+              rel="noreferrer"
+              className="me-4"
+            >
               <BsGithub />
             </a>
-            <a href="face">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/tandat.nguyen.1042032"
+            >
               <BsFacebook />
             </a>
           </Col>

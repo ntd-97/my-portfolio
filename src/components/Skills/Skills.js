@@ -1,6 +1,8 @@
+import { Col, Container, Row } from "react-bootstrap";
+
 import { motion } from "framer-motion";
 
-import { Col, Container, Row } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 import htmlIcon from "../../assets/images/html.png";
 import cssIcon from "../../assets/images/css.png";
@@ -44,6 +46,7 @@ const Skills = () => {
       },
     },
   };
+
   const colVariants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
@@ -51,6 +54,8 @@ const Skills = () => {
 
   const MotionCol = motion(Col);
   const MotionRow = motion(Row);
+
+  const { t } = useTranslation();
 
   return (
     <Container id="skills" className="skills">
@@ -61,7 +66,7 @@ const Skills = () => {
         transition={{ duration: 0.7 }}
         className="common__heading"
       >
-        Kỹ năng
+        {t("skills.tSkills")}
       </motion.h2>
 
       <Container>

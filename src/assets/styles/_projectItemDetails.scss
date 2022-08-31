@@ -16,8 +16,12 @@
   }
 
   .project__specs {
-    text-align: justify;
     font-size: $default-font-size;
+  }
+
+  .project__specs p:last-child {
+    text-align: justify;
+    line-height: 3rem;
   }
 
   &__btnGroup {
@@ -40,7 +44,7 @@
   }
 
   &__demoBtn {
-    width: 15%;
+    width: 8%;
     text-align: right;
     text-decoration: none;
     color: $light-color;

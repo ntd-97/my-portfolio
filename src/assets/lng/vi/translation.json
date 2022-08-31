@@ -1,0 +1,42 @@
+{
+    "banner": {
+        "heading": "Xin chào, Mình là Đạt - Một lập trình viên.",
+        "title": "Sau hơn 2 năm làm việc với vị trí developer. Mình nhận ra lập trình Frontend là thứ kiến mình thích thú nhất. Mình mong với những kiến thức hiện tại có thể đóng góp phần nào cho team."
+    },
+    "navbar": {
+        "about": "Giới thiệu",
+        "skills": "Kỹ năng",
+        "projects": "Dự án",
+        "contact": "Liên hệ"
+    },
+    "about": {
+        "heading": "Giới thiệu",
+        "specHeading": "Một vài điều về mình",
+        "spec": "Mình là Nguyễn Tấn Đạt, tốt nghiệp ngành Công nghệ thông tin - Đại học Cần Thơ. Mình có hơn hai năm làm việc cho một công ty outsourcing ở cả vị trí developer và tester. Sau khoảng thời gian đó mình nhận thấy lập trình giao diện web, app là thứ mình thích nhất. Do đó mình đã dành nhiều hơn thời gian và tâm huyết cho nó. Mình là người hòa đồng, có tinh thần trách nhiệm cao và luôn học hỏi để nâng cao kiến thức, kỹ năng của bản thân.",
+        "education": "Học vấn",
+        "major": "Công nghệ thông tin",
+        "university": "Đại học Cần Thơ",
+        "experiences": "Kinh nghiệm làm việc",
+        "company1": "Công ty Invidual Systems"
+    },
+    "skills": {
+        "tSkills": "Kỹ năng"
+    },
+    "projectSpec": {
+        "technical": "Kỹ thuật: ",
+        "role": "Vị trí: ",
+        "details": "Chi tiết: "
+    },
+    "contact": {
+        "title": "Nếu bạn đang tìm kiếm một front-end developer. Mình hy vọng sẽ trở thành một thành viên của team.",
+        "name": "Tên",
+        "email": "Email",
+        "messages": "Tin nhắn",
+        "enterName": "Nhập tên",
+        "enterEmail": "Nhập email",
+        "enterMessage": "Nhập tin nhắn",
+        "sendMail": "Gửi",
+        "sendMailSuccess": "Gửi mail thành công",
+        "sendMailFail": "Gửi mail thất bại"
+    }
+}

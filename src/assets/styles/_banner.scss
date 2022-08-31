@@ -27,7 +27,6 @@
     &__shape {
       content: "";
       position: absolute;
-      position: absolute;
       max-width: 400px;
       max-height: 400px;
       width: 100%;
@@ -40,11 +39,18 @@
     }
   }
 
-  @media (max-width: 992px) {
+  @media (max-width: $max-width-medium) {
     padding-top: 18%;
+    &__heading {
+      text-align: center;
+    }
+
+    &__spec {
+      text-align: justify;
+    }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $max-width-small) {
     padding-top: 28%;
 
     &__heading {

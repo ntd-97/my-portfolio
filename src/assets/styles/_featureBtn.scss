@@ -1,0 +1,55 @@
+.feature {
+    position: relative;
+    margin-left: 5%;
+    width: 7%;
+    max-height: 32px;
+    min-width: 82px;
+    background-color: $light-color;
+    border-radius: 15px;
+    padding: 6px 7px;
+
+    @media only screen and (max-width: $max-width-small) {
+        width: 20%;
+        margin-left: 7%;
+    }
+
+    &__theme-btn {
+        color: $dark-color;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__language-btn {
+        color: $dark-color;
+        font-weight: 600;
+        font-size: 1.8rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        p {
+            position: absolute;
+            right: 8px;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.light .feature {
+    background-color: $dark-color;
+
+    &__theme-btn {
+        color: $light-color;
+    }
+
+    &__language-btn {
+        color: $light-color;
+    }
+}

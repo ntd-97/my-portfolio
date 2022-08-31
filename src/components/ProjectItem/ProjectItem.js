@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
-import { ThemeContext } from "../../App";
 
 import ProjectItemDetails from "../ProjectItemDetails/ProjectItemDetails";
 
 import { Modal } from "react-bootstrap";
+
 import { CgClose } from "react-icons/cg";
+
+import { ThemeContext } from "../../App";
 
 const ProjectItem = ({ project }) => {
   const { theme } = useContext(ThemeContext);

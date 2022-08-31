@@ -1,13 +1,19 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../App";
+
+import { Row, Col, Container } from "react-bootstrap";
+
+import AvatarImg from "../../assets/images/avatar.jpg";
 
 import { motion } from "framer-motion";
 
-import { Row, Col, Container } from "react-bootstrap";
-import AvatarImg from "../../assets/images/avatar.jpg";
+import { ThemeContext } from "../../App";
+
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
   const { theme } = useContext(ThemeContext);
+
+  const { t } = useTranslation();
 
   const bannerVariants = {
     show: { opacity: 1, y: 0 },
@@ -25,7 +31,7 @@ const Banner = () => {
             transition={{ duration: 1 }}
             className="banner__heading mb-5 px-3 px-md-0"
           >
-            Xin chào, Mình là Đạt - Một lập trình viên.
+            {t("banner.heading")}
           </motion.h1>
 
           <motion.p
@@ -35,9 +41,7 @@ const Banner = () => {
             transition={{ duration: 1.5 }}
             className={`banner__spec ${theme}  px-3 px-md-0`}
           >
-            Sau hơn 2 năm làm việc với vị trí developer. Mình nhận ra lập trình
-            Frontend là thứ kiến mình thích thú nhất. Mình mong với những kiến
-            thức hiện tại có thể đóng góp phần nào cho team.
+            {t("banner.title")}
           </motion.p>
         </Col>
 

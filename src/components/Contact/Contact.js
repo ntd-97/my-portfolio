@@ -1,17 +1,22 @@
-import { useRef, useState, useContext } from "react";
-import { ThemeContext } from "../../App";
+import { useRef, useState, useContext, useEffect } from "react";
 
 import { motion } from "framer-motion";
 
-import { Col, Container, Row, Toast } from "react-bootstrap";
-import { Form } from "react-bootstrap";
+import { Col, Container, Row, Toast, Form } from "react-bootstrap";
 
 import { AiOutlineMail } from "react-icons/ai";
+
 import contactImg from "../../assets/images/contact.png";
 
 import emailjs from "@emailjs/browser";
 
+import { ThemeContext } from "../../App";
+
+import { useTranslation } from "react-i18next";
+
 const Contact = () => {
+  const { t } = useTranslation();
+
   const { theme } = useContext(ThemeContext);
 
   const [showSendMailMsg, setShowSendMailMsg] = useState(false);
@@ -19,8 +24,10 @@ const Contact = () => {
 
   const form = useRef();
 
-  let contactVariants = {};
+  const reRenderMail = useRef("");
+
   const MotionCol = motion(Col);
+  let contactVariants = {};
 
   const sendMail = (event) => {
     const mailData = {
@@ -45,14 +52,21 @@ const Contact = () => {
           form.current.elements.messages.value = "";
           setMailMsg("Email sent successfully!");
           setShowSendMailMsg(true);
+          reRenderMail.current = "mail";
         },
         (err) => {
           setMailMsg("Email sending failed!");
           setShowSendMailMsg(true);
+          reRenderMail.current = "mail";
         }
       );
   };
 
+  useEffect(() => {
+    reRenderMail.current = "";
+  });
+
+  // change variant according to screen width
   if (window.innerWidth < 1200) {
     contactVariants = {
       hideLeft: { opacity: 0, y: 20 },
@@ -76,12 +90,12 @@ const Contact = () => {
         transition={{ duration: 0.7 }}
         className="common__heading"
       >
-        Liên hệ
+        {t("navbar.contact")}
       </motion.h2>
       <Container>
         <Row xs={1} lg={2}>
           <MotionCol
-            variants={contactVariants}
+            variants={reRenderMail.current === "mail" ? {} : contactVariants}
             initial="hideLeft"
             whileInView="show"
             viewport={{ once: true, amount: 0.8 }}
@@ -89,14 +103,13 @@ const Contact = () => {
             className="d-flex flex-column align-items-center justify-content-between"
           >
             <p className={`contact__spec ${theme} mb-5 px-4`}>
-              Nếu bạn đang tìm kiếm một front-end developer. Mình hy vọng sẽ trở
-              thành một thành viên của team.
+              {t("contact.title")}
             </p>
             <img className="contact__img" alt="contact img" src={contactImg} />
           </MotionCol>
 
           <MotionCol
-            variants={contactVariants}
+            variants={reRenderMail.current === "mail" ? {} : contactVariants}
             initial="hideRight"
             whileInView="show"
             viewport={{ once: true, amount: 0.8 }}
@@ -107,13 +120,15 @@ const Contact = () => {
               <Row className="mb-5" xs={1} lg={2}>
                 <Col className="mb-5 mb-lg-0">
                   <Form.Group controlId="formName">
-                    <Form.Label className="mb-3">Tên</Form.Label>
+                    <Form.Label className="mb-3">
+                      {t("contact.name")}
+                    </Form.Label>
                     <Form.Control
                       className="form__input"
                       size="lg"
                       type="text"
                       name="name"
-                      placeholder="Nhập tên"
+                      placeholder={t("contact.enterName")}
                       required={true}
                     />
                   </Form.Group>
@@ -121,13 +136,15 @@ const Contact = () => {
 
                 <Col>
                   <Form.Group controlId="formEmail">
-                    <Form.Label className="mb-3">Email</Form.Label>
+                    <Form.Label className="mb-3">
+                      {t("contact.email")}
+                    </Form.Label>
                     <Form.Control
                       className="form__input"
                       size="lg"
                       type="email"
                       name="email"
-                      placeholder="Nhập email"
+                      placeholder={t("contact.enterEmail")}
                       required={true}
                     />
                   </Form.Group>
@@ -137,12 +154,14 @@ const Contact = () => {
               <Row className="mb-5">
                 <Col>
                   <Form.Group controlId="formMessages">
-                    <Form.Label className="mb-3">Tin nhắn</Form.Label>
+                    <Form.Label className="mb-3">
+                      {t("contact.messages")}
+                    </Form.Label>
                     <Form.Control
                       className="form__input"
                       size="lg"
                       as="textarea"
-                      placeholder="Nhập tin nhắn"
+                      placeholder={t("contact.enterMessage")}
                       name="messages"
                       rows={3}
                       required={true}
@@ -151,12 +170,13 @@ const Contact = () => {
                 </Col>
               </Row>
 
-              <Row xs={1} md={2}>
-                <Col>
+              <Row>
+                <Col xs={12} md={8}>
                   <Toast
                     className="contact__toast-msg mb-4 mb-md-0"
                     onClose={() => {
                       setShowSendMailMsg(false);
+                      reRenderMail.current = "mail";
                     }}
                     show={showSendMailMsg}
                     animation={true}
@@ -171,13 +191,13 @@ const Contact = () => {
                     </Toast.Header>
                   </Toast>
                 </Col>
-                <Col>
+                <Col xs={12} md={4}>
                   <button
                     type="submit"
                     className="common__btn contact__mail-btn pt-3 pb-3 pe-3"
                   >
                     <AiOutlineMail className="contact__mail-icon" />
-                    Gửi mail
+                    {t("contact.sendMail")}
                   </button>
                 </Col>
               </Row>
