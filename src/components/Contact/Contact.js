@@ -38,28 +38,28 @@ const Contact = () => {
 
     event.preventDefault();
 
-    emailjs
-      .send(
-        "service_1v19kei",
-        "template_9962fmk",
-        mailData,
-        "ZxWiwkRm2LbymPPKV"
-      )
-      .then(
-        (response) => {
-          form.current.elements.name.value = "";
-          form.current.elements.email.value = "";
-          form.current.elements.messages.value = "";
-          setMailMsg("Email sent successfully!");
-          setShowSendMailMsg(true);
-          reRenderMail.current = "mail";
-        },
-        (err) => {
-          setMailMsg("Email sending failed!");
-          setShowSendMailMsg(true);
-          reRenderMail.current = "mail";
-        }
-      );
+emailjs
+  .send(
+    process.env.REACT_APP_MAIL_SERVICE_ID,
+    process.env.REACT_APP_MAIL_TEMPLATE_ID,
+    mailData,
+    process.env.REACT_APP_MAIL_PUBLIC_KEY
+  )
+  .then(
+    (response) => {
+      form.current.elements.name.value = "";
+      form.current.elements.email.value = "";
+      form.current.elements.messages.value = "";
+      setMailMsg("Email sent successfully!");
+      setShowSendMailMsg(true);
+      reRenderMail.current = "mail";
+    },
+    (err) => {
+      setMailMsg("Email sending failed!");
+      setShowSendMailMsg(true);
+      reRenderMail.current = "mail";
+    }
+  );
   };
 
   useEffect(() => {

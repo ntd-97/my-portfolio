@@ -17,7 +17,7 @@ i18n
         translation: vi,
       },
     },
-    debug: true,
+    debug: false,
     lng: "en",
     fallbackLng: "en",
 
