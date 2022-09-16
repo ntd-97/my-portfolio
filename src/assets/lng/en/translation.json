@@ -1,6 +1,7 @@
 {
     "banner": {
-        "heading": "Hi, I am Dat A Developer",
+        "heading_1": "Hello, I am Dat ",
+        "heading_2": "A Developer",
         "title": "After more than two years of working as a developer, I realized that Frontend programming is what I enjoy the most. So I hope I can contribute something to the team with my current knowledge."
     },
     "navbar": {

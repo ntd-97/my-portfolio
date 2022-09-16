@@ -21,7 +21,7 @@ const Footer = () => {
             className="d-flex justify-content-center justify-content-md-start footer__copy-right"
           >
             <p>
-              Make by <strong>Me</strong> - Copy rigth 2022.
+              Make by <strong>me</strong>.
             </p>
           </Col>
           <Col

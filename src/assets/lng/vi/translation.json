@@ -1,6 +1,7 @@
 {
     "banner": {
-        "heading": "Xin chào, Mình là Đạt - Một lập trình viên.",
+        "heading_1": "Xin chào, Mình là Đạt",
+        "heading_2": "Một lập trình viên.",
         "title": "Sau hơn 2 năm làm việc với vị trí developer. Mình nhận ra lập trình Frontend là thứ kiến mình thích thú nhất. Mình mong với những kiến thức hiện tại có thể đóng góp phần nào cho team."
     },
     "navbar": {

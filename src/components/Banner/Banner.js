@@ -31,7 +31,9 @@ const Banner = () => {
             transition={{ duration: 1 }}
             className="banner__heading mb-5 px-3 px-md-0"
           >
-            {t("banner.heading")}
+            {t("banner.heading_1")}
+            <br />
+            {t("banner.heading_2")}
           </motion.h1>
 
           <motion.p
