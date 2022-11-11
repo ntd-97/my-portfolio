@@ -40,7 +40,7 @@ export const workExperiences = [
         ],
         roles: "Developer",
         details:
-          "Xây dựng web phim cho phép người dùng có thể xem thông tin phim, tìm kiếm phim - diễn viên, hiển thị và lọc phim theo danh sách. Bên cạnh đó người dùng còn có thể thêm phim vào danh sách xem sau và danh sách yêu thích.",
+          "Xây dựng web phim cho phép người dùng có thể xem thông tin phim, tìm kiếm phim - diễn viên và lọc phim theo danh sách. Bên cạnh đó, người dùng còn có thể thêm phim vào danh sách xem sau và danh sách yêu thích.",
         details_en:
           "Build a movie web allows users to view movie information - tv series, search movies - tv series - actors, and filter movies - tv series by list.  In addition, users can add movies and TV shows to their watch-later and favorites lists.",
         git: "https://github.com/ntd-97/movie",
