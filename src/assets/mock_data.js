@@ -24,7 +24,7 @@ export const workExperiences = [
         details_en:
           "Build a portfolio website with Reactjs and libraries like react-bootstrap, react-scroll, swiper, etc. Users can switch back and forth between dark and light interfaces and switch languages between Vietnamese and English.",
         git: "https://github.com/ntd-97/my-portfolio",
-        demo: "https://aquamarine-moxie-407723.netlify.app/",
+        demo: "https://my-portfolio-lyart-five.vercel.app/",
       },
       {
         title: "Metv",
