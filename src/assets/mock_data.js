@@ -1,6 +1,7 @@
 import MyPortfolio from "../assets/images/projects/my-portfolio.png";
 import YelpCamp from "../assets/images/projects/yelpcamp.png";
 import NgotBand from "../assets/images/projects/ngot-band.png";
+import MeTv from "../assets/images/projects/metv.png";
 import SmartHome from "../assets/images/projects/smart_home.png";
 import ErrorSys from "../assets/images/projects/error_system.png";
 import PrintSys from "../assets/images/projects/print_system.png";
@@ -16,20 +17,54 @@ export const workExperiences = [
       {
         title: "My Portfolio",
         img: MyPortfolio,
-        technicals: [
-          "HTML",
-          "SCSS",
-          "ReactJS",
-          "React Bootstrap",
-          "React Slick",
-        ],
+        technicals: ["HTML", "SCSS", "ReactJS", "React Bootstrap", "Swiper"],
         roles: "Developer",
         details:
-          "Xây dựng một portfolio website bằng Reactjs kèm một số thư viện như react-bootstrap, react-scroll, swiper,.. . Người dùng có thể chuyển đổi qua lại giữa giao diện tối và sáng cũng như ngôn ngữ tiếng Việt và tiếng Anh",
+          "Xây dựng một portfolio website bằng Reactjs kèm một số thư viện như react-bootstrap, react-scroll, swiper,... . Người dùng có thể chuyển đổi qua lại giữa giao diện tối và sáng cũng như ngôn ngữ tiếng Việt và tiếng Anh",
         details_en:
           "Build a portfolio website with Reactjs and libraries like react-bootstrap, react-scroll, swiper, etc. Users can switch back and forth between dark and light interfaces and switch languages between Vietnamese and English.",
         git: "https://github.com/ntd-97/my-portfolio",
         demo: "https://ntd-97.github.io/my-portfolio/",
+      },
+      {
+        title: "Metv",
+        img: MeTv,
+        technicals: [
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "Swiper",
+          "ReactJS",
+          "Redux",
+          "Redux Saga",
+        ],
+        roles: "Developer",
+        details:
+          "Xây dựng web phim cho phép người dùng có thể xem thông tin phim, tìm kiếm phim - diễn viên, hiển thị và lọc phim theo danh sách. Bên cạnh đó người dùng còn có thể thêm phim vào danh sách xem sau và danh sách yêu thích.",
+        details_en:
+          "Build a movie web allows users to view movie information - tv series, search movies - tv series - actors, and filter movies - tv series by list.  In addition, users can add movies and TV shows to their watch-later and favorites lists.",
+        git: "https://github.com/ntd-97/movie",
+        demo: "https://mellifluous-longma-fc46e4.netlify.app/movies",
+      },
+      {
+        title: "Ngọt Band",
+        img: NgotBand,
+        technicals: [
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "Swiper",
+          "ReactJS",
+          "Redux",
+          "Redux Saga",
+        ],
+        roles: "Developer",
+        details:
+          "Xây dựng một trang web giới thiệu nhóm nhạc bằng HTML, CSS và ReactJS. Trang web cho phép người dùng xem thông tin show cũng như đăng ký tài khoản và mua vé.",
+        details_en:
+          "Build a music band showcase website using HTML, CSS and ReactJS. The site allows users to view show information, register for an account and purchase tickets.",
+        git: "https://github.com/ntd-97/ngot-band-reactjs",
+        demo: "https://chipper-valkyrie-93ed8f.netlify.app/",
       },
       {
         title: "YelpCamp",
@@ -50,18 +85,6 @@ export const workExperiences = [
           "Build a web application that allows users to register, log in, add, edit and delete camping sites. These campsites will be displayed on the map and accessed from here. Besides, users can add, edit and delete reviews for each location.",
         git: "https://github.com/ntd-97/yelp-camp",
         demo: "https://whispering-taiga-58252.herokuapp.com/",
-      },
-      {
-        title: "Ngọt Band",
-        img: NgotBand,
-        technicals: ["HTML", "CSS", "Javascript"],
-        roles: "Developer",
-        details:
-          "Xây dựng một trang web giới thiệu nhóm nhạc bằng HTML, CSS và Javascript. Giao diện của trang thay đổi theo từng kích thước màn hình khác nhau.",
-        details_en:
-          "Build a music band showcase website using HTML, CSS and Javascript. The interface of the page changes according to different screen sizes.",
-        git: "https://github.com/ntd-97/ngot-band",
-        demo: "https://ntd-97.github.io/ngot-band/",
       },
       {
         title: "Travel Application",
