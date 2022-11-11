@@ -35,6 +35,7 @@ export const workExperiences = [
           "Tailwind CSS",
           "Swiper",
           "ReactJS",
+          "React Router",
           "Redux",
           "Redux Saga",
         ],
@@ -57,6 +58,8 @@ export const workExperiences = [
           "ReactJS",
           "Redux",
           "Redux Saga",
+          "Express JS",
+          "Mongo DB",
         ],
         roles: "Developer",
         details:
