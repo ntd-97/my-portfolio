@@ -17,7 +17,14 @@ export const workExperiences = [
       {
         title: "My Portfolio",
         img: MyPortfolio,
-        technicals: ["HTML", "SCSS", "ReactJS", "React Bootstrap", "Swiper"],
+        technicals: [
+          "HTML",
+          "SCSS",
+          "JavaScript",
+          "ReactJS",
+          "React Bootstrap",
+          "Swiper",
+        ],
         roles: "Developer",
         details:
           "Xây dựng một portfolio website bằng Reactjs kèm một số thư viện như react-bootstrap, react-scroll, swiper,... . Người dùng có thể chuyển đổi qua lại giữa giao diện tối và sáng cũng như ngôn ngữ tiếng Việt và tiếng Anh",
@@ -32,6 +39,7 @@ export const workExperiences = [
         technicals: [
           "HTML",
           "CSS",
+          "JavaScript",
           "Tailwind CSS",
           "Swiper",
           "ReactJS",
@@ -41,9 +49,9 @@ export const workExperiences = [
         ],
         roles: "Developer",
         details:
-          "Xây dựng web phim cho phép người dùng có thể xem thông tin phim, tìm kiếm phim - diễn viên và lọc phim theo danh sách. Bên cạnh đó, người dùng còn có thể thêm phim vào danh sách xem sau và danh sách yêu thích.",
+          "Xây dựng web phim cho phép người dùng có thể xem thông tin phim, tìm kiếm phim, diễn viên và lọc phim theo danh sách. Bên cạnh đó, người dùng còn có thể thêm phim vào danh sách xem sau và danh sách yêu thích.",
         details_en:
-          "Build a movie web allows users to view movie information - tv series, search movies - tv series - actors, and filter movies - tv series by list.  In addition, users can add movies and TV shows to their watch-later and favorites lists.",
+          "Build a movie website allows users to view movie and TV series details, search for movies, TV series, and actors, as well as filter them by list. In addition, users can add movies and TV shows to their watch-later and favorite lists.",
         git: "https://github.com/ntd-97/movie",
         demo: "https://mellifluous-longma-fc46e4.netlify.app/movies",
       },
@@ -53,6 +61,7 @@ export const workExperiences = [
         technicals: [
           "HTML",
           "CSS",
+          "JavaScript",
           "Tailwind CSS",
           "Swiper",
           "ReactJS",
@@ -63,9 +72,9 @@ export const workExperiences = [
         ],
         roles: "Developer",
         details:
-          "Xây dựng một trang web giới thiệu nhóm nhạc bằng HTML, CSS và ReactJS. Trang web cho phép người dùng xem thông tin show cũng như đăng ký tài khoản và mua vé.",
+          "Xây dựng một trang web giới thiệu nhóm nhạc. Trang web sẽ hiển thị toàn bộ thông tin về ban nhạc, các thành viên, album và các show diễn. Thêm vào đó người dùng cũng có thể đăng ký tài khoản và mua vé.",
         details_en:
-          "Build a music band showcase website using HTML, CSS and ReactJS. The site allows users to view show information, register for an account and purchase tickets.",
+          "Build a musical band showcase website. The site shows all information about the band, its members, albums and shows. In addition, users can register for an account and purchase tickets.",
         git: "https://github.com/ntd-97/ngot-band-reactjs",
         demo: "https://chipper-valkyrie-93ed8f.netlify.app/",
       },
@@ -85,7 +94,7 @@ export const workExperiences = [
         details:
           "Xây dựng ứng dụng web cho phép người dùng đăng ký, đăng nhập, thêm, sửa và xóa địa điểm cắm trại. Các địa điểm cắm trại này sẽ được hiển thị lên bảng đồ và có thể truy cập từ đây. Bên cạnh đó người dùng có thể thêm, sửa và xóa các đánh giá cho từng địa điểm.",
         details_en:
-          "Build a web application that allows users to register, log in, add, edit and delete camping sites. These campsites will be displayed on the map and accessed from here. Besides, users can add, edit and delete reviews for each location.",
+          "Build a web application that allows users to register, log in, add, edit and delete camping sites. These campsites will be displayed on the map and accessible from here. Besides, users can add, edit and delete reviews for each location.",
         git: "https://github.com/ntd-97/yelp-camp",
         demo: "https://whispering-taiga-58252.herokuapp.com/",
       },
@@ -138,7 +147,7 @@ export const workExperiences = [
         details:
           "Dựa theo tài liệu mà khách hàng cung cấp. Thêm các ràng buộc, quyền cho app trong flow trên Kintone và đảm bảo app hoạt động đúng như yêu cầu. Với vai trò tester tiến hành viết testcase theo tài liệu sau đó kiểm thử. Lập tài liệu triển khai lên môi trường người dùng",
         details_en:
-          "Based on the documents provided by the customer. Add constraints and permissions to the app in flow on Kintone and ensure it works as it should. As a tester, write test cases according to the document and then test. Write deployment documentation to the user environment.",
+          "Based on the documents provided by the customer. Add constraints and permissions to the app in flow on Kintone and ensure it works as it should. As a tester, write test cases according to the document and then test. Create user environment deployment documentation.",
         git: "",
         demo: "",
       },
