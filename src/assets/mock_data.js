@@ -96,7 +96,7 @@ export const workExperiences = [
         details_en:
           "Build a web application that allows users to register, log in, add, edit and delete camping sites. These campsites will be displayed on the map and accessible from here. Besides, users can add, edit and delete reviews for each location.",
         git: "https://github.com/ntd-97/yelp-camp",
-        demo: "https://whispering-taiga-58252.herokuapp.com/",
+        demo: "https://yelp-camp-9n6u.onrender.com/",
       },
       {
         title: "Travel Application",
